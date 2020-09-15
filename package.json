@@ -1,7 +1,7 @@
 {
   "name": "shop-snippet",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "Shopping package snippet",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,7 +11,7 @@
     "build": "webpack --mode production"
   },
   "keywords": [],
-  "author": "",
+  "author": "Julio Martinez",
   "license": "ISC",
   "devDependencies": {
     "css-loader": "^4.3.0",

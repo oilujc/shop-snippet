@@ -1,17 +1,19 @@
 import "./scss/styles.scss";
 
-function ShopSnippet(options) {
-  this._selector = document.querySelector(options.selector);
-  this._container = document.createElement("div");
+export default class ShopSnippet {
+  constructor(options) {
+    this._selector = document.querySelector(options.selector);
+    this._container = document.createElement("div");
 
-  this._data = {
-    title: "Get This new promo",
-    content: "<p>Hello World <p><p>Hello World <p>",
-    url: "http://example.com",
-    page: "promos",
-  };
+    this._data = {
+      title: "Get This new promo",
+      content: "<p>Hello World <p><p>Hello World <p>",
+      url: "http://example.com",
+      page: "promos",
+    };
+  }
 
-  this.createHeader = function () {
+  createHeader() {
     let headerTitleText = document.createTextNode(this._data.title);
     let link = document.createElement("a");
     link.appendChild(headerTitleText);
@@ -31,21 +33,21 @@ function ShopSnippet(options) {
     header.appendChild(headerTitle);
 
     return header;
-  };
+  }
 
-  this.createBody = function () {
+  createBody() {
     let body = document.createElement("div");
     body.classList.add("sh-container__body");
     body.innerHTML = this._data.content;
 
     return body;
-  };
+  }
 
-  this.init = function () {
+  init() {
     this._container.appendChild(this.createHeader());
     this._container.appendChild(this.createBody());
     this._container.classList.add("sh-container");
 
     this._selector.appendChild(this._container);
-  };
+  }
 }
