@@ -22,6 +22,7 @@
     "postcss-loader": "^4.0.1",
     "sass": "^1.26.10",
     "sass-loader": "^10.0.2",
+    "script-loader": "^0.7.2",
     "terser-webpack-plugin": "^4.2.1",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
